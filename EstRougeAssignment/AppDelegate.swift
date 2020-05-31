@@ -25,7 +25,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 extension AppDelegate {
 
     private func setupRootViewController() {
-        let viewController = UIViewController()
+        let viewController = UserListViewController()
         let navigationController = UINavigationController(rootViewController: viewController)
         window = UIWindow(frame: UIScreen.main.bounds)
         window?.rootViewController = navigationController
