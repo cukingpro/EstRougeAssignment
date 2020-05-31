@@ -42,6 +42,31 @@ PODS:
     - RxCocoa (~> 5.0)
     - RxSwift (~> 5.0)
   - SVProgressHUD (2.2.5)
+  - SwifterSwift (5.2.0):
+    - SwifterSwift/AppKit (= 5.2.0)
+    - SwifterSwift/CoreAnimation (= 5.2.0)
+    - SwifterSwift/CoreGraphics (= 5.2.0)
+    - SwifterSwift/CoreLocation (= 5.2.0)
+    - SwifterSwift/Dispatch (= 5.2.0)
+    - SwifterSwift/Foundation (= 5.2.0)
+    - SwifterSwift/MapKit (= 5.2.0)
+    - SwifterSwift/SceneKit (= 5.2.0)
+    - SwifterSwift/SpriteKit (= 5.2.0)
+    - SwifterSwift/StoreKit (= 5.2.0)
+    - SwifterSwift/SwiftStdlib (= 5.2.0)
+    - SwifterSwift/UIKit (= 5.2.0)
+  - SwifterSwift/AppKit (5.2.0)
+  - SwifterSwift/CoreAnimation (5.2.0)
+  - SwifterSwift/CoreGraphics (5.2.0)
+  - SwifterSwift/CoreLocation (5.2.0)
+  - SwifterSwift/Dispatch (5.2.0)
+  - SwifterSwift/Foundation (5.2.0)
+  - SwifterSwift/MapKit (5.2.0)
+  - SwifterSwift/SceneKit (5.2.0)
+  - SwifterSwift/SpriteKit (5.2.0)
+  - SwifterSwift/StoreKit (5.2.0)
+  - SwifterSwift/SwiftStdlib (5.2.0)
+  - SwifterSwift/UIKit (5.2.0)
 
 DEPENDENCIES:
   - AlamofireImage
@@ -54,6 +79,7 @@ DEPENDENCIES:
   - RxSwiftUtilities (from `https://github.com/RxSwiftCommunity/RxSwiftUtilities.git`, branch `master`)
   - RxViewController
   - SVProgressHUD
+  - SwifterSwift
 
 SPEC REPOS:
   trunk:
@@ -70,6 +96,7 @@ SPEC REPOS:
     - RxSwiftExt
     - RxViewController
     - SVProgressHUD
+    - SwifterSwift
 
 EXTERNAL SOURCES:
   RxSwiftUtilities:
@@ -96,7 +123,8 @@ SPEC CHECKSUMS:
   RxSwiftUtilities: dc208a9567b5b8da972056055de8f0446f9aa2d6
   RxViewController: 7330a46e5c31cd680db169da4c9fc8676e975a81
   SVProgressHUD: 1428aafac632c1f86f62aa4243ec12008d7a51d6
+  SwifterSwift: 334181863c416882d97b7a60c05054d9e4d799e2
 
-PODFILE CHECKSUM: a0e54a99994ac69832a0c333e8a6724acc2122b5
+PODFILE CHECKSUM: 3f1f13823e149bcd184fe37c8745a1b5d473d089
 
 COCOAPODS: 1.9.2

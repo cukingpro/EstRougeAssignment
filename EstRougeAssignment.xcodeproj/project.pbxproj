@@ -21,10 +21,10 @@
 		170BB8DA2484139400C4C079 /* UserTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 170BB8D72484139400C4C079 /* UserTableViewCell.swift */; };
 		170BB8DB2484139400C4C079 /* UserTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 170BB8D82484139400C4C079 /* UserTableViewCell.xib */; };
 		170BB8DC2484139400C4C079 /* UserTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 170BB8D82484139400C4C079 /* UserTableViewCell.xib */; };
-		170BB8E0248413FE00C4C079 /* UITableViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 170BB8DF248413FE00C4C079 /* UITableViewExtensions.swift */; };
-		170BB8E1248413FE00C4C079 /* UITableViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 170BB8DF248413FE00C4C079 /* UITableViewExtensions.swift */; };
 		170BB8E6248424C500C4C079 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 170BB8E5248424C500C4C079 /* User.swift */; };
 		170BB8E7248424C500C4C079 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 170BB8E5248424C500C4C079 /* User.swift */; };
+		170BB8E9248427E500C4C079 /* UserTarget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 170BB8E8248427E500C4C079 /* UserTarget.swift */; };
+		170BB8EA248427E500C4C079 /* UserTarget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 170BB8E8248427E500C4C079 /* UserTarget.swift */; };
 		20BD7B4995036846E4F5B7E1 /* Pods_EstRougeAssignmentTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 20E83A8BCBA53FC097C5A89C /* Pods_EstRougeAssignmentTests.framework */; };
 		99740D29071B3E43DDC45217 /* Pods_EstRougeAssignment.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 051DE4A7ECE66BA0ABCE87AA /* Pods_EstRougeAssignment.framework */; };
 /* End PBXBuildFile section */
@@ -54,7 +54,6 @@
 		170BB8D3248412C700C4C079 /* UserListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserListViewModel.swift; sourceTree = "<group>"; };
 		170BB8D72484139400C4C079 /* UserTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserTableViewCell.swift; sourceTree = "<group>"; };
 		170BB8D82484139400C4C079 /* UserTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UserTableViewCell.xib; sourceTree = "<group>"; };
-		170BB8DF248413FE00C4C079 /* UITableViewExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITableViewExtensions.swift; sourceTree = "<group>"; };
 		170BB8E5248424C500C4C079 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		171BCC71FAC303BAF072C95A /* Pods-EstRougeAssignment.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EstRougeAssignment.release.xcconfig"; path = "Target Support Files/Pods-EstRougeAssignment/Pods-EstRougeAssignment.release.xcconfig"; sourceTree = "<group>"; };
 		20E83A8BCBA53FC097C5A89C /* Pods_EstRougeAssignmentTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_EstRougeAssignmentTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -159,7 +158,6 @@
 		170BB8DD2484139D00C4C079 /* Extension */ = {
 			isa = PBXGroup;
 			children = (
-				170BB8DF248413FE00C4C079 /* UITableViewExtensions.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -377,7 +375,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				170BB8E0248413FE00C4C079 /* UITableViewExtensions.swift in Sources */,
 				170BB8D92484139400C4C079 /* UserTableViewCell.swift in Sources */,
 				170BB8E6248424C500C4C079 /* User.swift in Sources */,
 				170BB8AA2483FFA300C4C079 /* AppDelegate.swift in Sources */,
@@ -390,9 +387,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				170BB8E1248413FE00C4C079 /* UITableViewExtensions.swift in Sources */,
 				170BB8DA2484139400C4C079 /* UserTableViewCell.swift in Sources */,
 				170BB8E7248424C500C4C079 /* User.swift in Sources */,
+				170BB8EA248427E500C4C079 /* UserTarget.swift in Sources */,
 				170BB8C12483FFA500C4C079 /* EstRougeAssignmentTests.swift in Sources */,
 				170BB8D5248412C700C4C079 /* UserListViewModel.swift in Sources */,
 				170BB8D02484116000C4C079 /* UserListViewController.swift in Sources */,

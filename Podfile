@@ -16,6 +16,7 @@ target 'EstRougeAssignment' do
   pod 'RxSwiftUtilities', :git => 'https://github.com/RxSwiftCommunity/RxSwiftUtilities.git', :branch => 'master'
   pod 'RxSwiftExt'
   pod 'NSObject+Rx'
+  pod 'SwifterSwift'
 
   target 'EstRougeAssignmentTests' do
     inherit! :search_paths
