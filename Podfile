@@ -6,6 +6,16 @@ target 'EstRougeAssignment' do
   use_frameworks!
 
   # Pods for EstRougeAssignment
+  pod 'Moya/RxSwift'
+  pod 'ObjectMapper'
+  pod 'Moya-ObjectMapper/RxSwift'
+  pod 'AlamofireImage'
+  pod 'AlamofireNetworkActivityIndicator'
+  pod 'SVProgressHUD'
+  pod 'RxViewController'
+  pod 'RxSwiftUtilities', :git => 'https://github.com/RxSwiftCommunity/RxSwiftUtilities.git', :branch => 'master'
+  pod 'RxSwiftExt'
+  pod 'NSObject+Rx'
 
   target 'EstRougeAssignmentTests' do
     inherit! :search_paths
