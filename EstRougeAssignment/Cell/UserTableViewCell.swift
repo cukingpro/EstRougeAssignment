@@ -7,18 +7,33 @@
 //
 
 import UIKit
+import AlamofireImage
+import RxSwift
 
 class UserTableViewCell: UITableViewCell {
 
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        // Initialization code
+    // MARK: - IBOutlets
+
+    @IBOutlet private weak var avatarImageView: UIImageView!
+    @IBOutlet private weak var nameLabel: UILabel!
+    @IBOutlet private weak var htmlUrlLabel: UILabel!
+
+    // MARK: - Functions
+
+    func bind(to viewModel: UserTableViewCellViewModel) {
+        viewModel.login.bind(to: nameLabel.rx.text).disposed(by: rx.disposeBag)
+        viewModel.htmlUrl.bind(to: htmlUrlLabel.rx.text).disposed(by: rx.disposeBag)
+        viewModel.avatarUrl.subscribe(onNext: { [weak self] url in
+            if let url = URL(string: url) {
+                self?.avatarImageView.af.setImage(withURL: url)
+            }
+        }).disposed(by: rx.disposeBag)
     }
 
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
+    override func prepareForReuse() {
+        super.prepareForReuse()
+        var mutatingSelf = self
+        mutatingSelf.rx.disposeBag = DisposeBag()
     }
     
 }

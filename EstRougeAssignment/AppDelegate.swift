@@ -7,6 +7,9 @@
 //
 
 import UIKit
+import SVProgressHUD
+
+typealias HUD = SVProgressHUD
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -15,10 +18,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         setupRootViewController()
+        configHUD()
         return true
     }
-
-
 
 }
 
@@ -30,6 +32,10 @@ extension AppDelegate {
         window = UIWindow(frame: UIScreen.main.bounds)
         window?.rootViewController = navigationController
         window?.makeKeyAndVisible()
+    }
+
+    private func configHUD() {
+        SVProgressHUD.setDefaultMaskType(.black)
     }
 }
 
