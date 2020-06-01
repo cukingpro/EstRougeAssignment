@@ -24,6 +24,8 @@ final class UserListViewController: UIViewController {
 
     let viewModel = UserListViewModel()
 
+    private let refreshControl = UIRefreshControl()
+
     override func viewDidLoad() {
         super.viewDidLoad()
         configUI()
@@ -49,10 +51,11 @@ final class UserListViewController: UIViewController {
         tableView.register(nibWithCellClass: UserTableViewCell.self)
         tableView.estimatedRowHeight = 80
         tableView.rowHeight = UITableView.automaticDimension
+        tableView.refreshControl = refreshControl
     }
 
     private func bindingData() {
-        let trigger = Driver.just(())
+        let trigger = refreshControl.rx.controlEvent(.valueChanged).asDriver().startWith(())
         let selection = tableView.rx.modelSelected(UserTableViewCellViewModel.self).asDriver()
         let input = UserListViewModel.Input(trigger: trigger, selection: selection)
 
@@ -65,6 +68,7 @@ final class UserListViewController: UIViewController {
         .disposed(by: rx.disposeBag)
 
         output.isLoading.drive(HUD.rx.isAnimating).disposed(by: rx.disposeBag)
+        output.isLoading.skip(1).drive(refreshControl.rx.isRefreshing).disposed(by: rx.disposeBag)
 
         output.userSelected.drive(onNext: { [weak self] userDetailViewModel in
             let userDetailViewController = UserDetailViewController()

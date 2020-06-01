@@ -16,6 +16,7 @@
                 <outlet property="locationLabel" destination="CoN-SL-MlX" id="H4d-ig-AfK"/>
                 <outlet property="nameLabel" destination="iIN-xT-HMl" id="Afj-6J-sUm"/>
                 <outlet property="publicRepoLabel" destination="cn3-Mw-Nu0" id="bTJ-SP-cRD"/>
+                <outlet property="scrollView" destination="Pko-Fo-5wa" id="bHO-1t-L97"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>

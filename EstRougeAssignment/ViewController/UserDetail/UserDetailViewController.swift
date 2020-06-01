@@ -13,7 +13,7 @@ import RxCocoa
 class UserDetailViewController: UIViewController {
 
     // MARK: - IBOutlets
-
+    @IBOutlet private weak var scrollView: UIScrollView!
     @IBOutlet private weak var avatarImageView: UIImageView!
     @IBOutlet private weak var nameLabel: UILabel!
     @IBOutlet private weak var locationLabel: UILabel!
@@ -26,6 +26,7 @@ class UserDetailViewController: UIViewController {
 
     var viewModel: UserDetailViewModel!
 
+    private let refreshControl = UIRefreshControl()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -37,6 +38,7 @@ class UserDetailViewController: UIViewController {
     
     private func configUI() {
         configNavigationBar()
+        configScrollView()
     }
 
     private func configNavigationBar() {
@@ -48,8 +50,12 @@ class UserDetailViewController: UIViewController {
         navigationItem.leftBarButtonItem = backButton
     }
 
+    private func configScrollView() {
+        scrollView.refreshControl = refreshControl
+    }
+
     private func bindingData() {
-        let trigger = Driver.just(())
+        let trigger = refreshControl.rx.controlEvent(.valueChanged).asDriver().startWith(())
         let input = UserDetailViewModel.Input(trigger: trigger)
 
         let output = viewModel.transform(input: input)
@@ -59,6 +65,7 @@ class UserDetailViewController: UIViewController {
             }
         }).disposed(by: rx.disposeBag)
         output.isLoading.drive(HUD.rx.isAnimating).disposed(by: rx.disposeBag)
+        output.isLoading.skip(1).drive(refreshControl.rx.isRefreshing).disposed(by: rx.disposeBag)
         output.name.drive(nameLabel.rx.text).disposed(by: rx.disposeBag)
         output.location.drive(locationLabel.rx.text).disposed(by: rx.disposeBag)
         output.bio.drive(bioLabel.rx.text).disposed(by: rx.disposeBag)
