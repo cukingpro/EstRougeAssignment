@@ -52,8 +52,9 @@ final class UserListViewController: UIViewController {
     }
 
     private func bindingData() {
-        let trigger = rx.viewDidAppear.mapTo(()).asDriver(onErrorJustReturn: ())
-        let input = UserListViewModel.Input(trigger: trigger)
+        let trigger = Driver.just(())
+        let selection = tableView.rx.modelSelected(UserTableViewCellViewModel.self).asDriver()
+        let input = UserListViewModel.Input(trigger: trigger, selection: selection)
 
         let output = viewModel.transform(input: input)
         output.cellViewModels.drive(tableView.rx.items) { tableView, row, cellViewModel in
@@ -64,6 +65,12 @@ final class UserListViewController: UIViewController {
         .disposed(by: rx.disposeBag)
 
         output.isLoading.drive(HUD.rx.isAnimating).disposed(by: rx.disposeBag)
+
+        output.userSelected.drive(onNext: { [weak self] userDetailViewModel in
+            let userDetailViewController = UserDetailViewController()
+            userDetailViewController.viewModel = userDetailViewModel
+            self?.navigationController?.pushViewController(userDetailViewController)
+        }).disposed(by: rx.disposeBag)
     }
 
 }

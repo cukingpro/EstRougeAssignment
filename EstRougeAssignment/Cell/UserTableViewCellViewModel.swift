@@ -12,11 +12,16 @@ import RxRelay
 
 final class UserTableViewCellViewModel {
 
+    // MARK: - Properties
+
+    let user: User
+
     let login: BehaviorRelay<String>
     let htmlUrl: BehaviorRelay<String>
     let avatarUrl: BehaviorRelay<String>
 
     init(user: User) {
+        self.user = user
         login = BehaviorRelay(value: user.login)
         htmlUrl = BehaviorRelay(value: user.htmlUrl)
         avatarUrl = BehaviorRelay(value: user.avatarUrl)

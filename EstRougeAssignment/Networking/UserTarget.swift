@@ -10,7 +10,7 @@ import Moya
 
 enum UserTarget {
     case getUsers
-    case getUser(id: Int)
+    case getUser(login: String)
 }
 
 extension UserTarget: TargetType {
@@ -22,8 +22,8 @@ extension UserTarget: TargetType {
         switch self {
         case .getUsers:
             return "users"
-        case .getUser(let id):
-            return "users/\(id)"
+        case .getUser(let login):
+            return "users/\(login)"
         }
     }
 

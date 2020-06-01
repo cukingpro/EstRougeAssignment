@@ -23,7 +23,7 @@ final class UserService {
         return provider.rx.request(.getUsers).mapArray(User.self)
     }
 
-    func getUser(id: Int) -> Single<User> {
-        return provider.rx.request(.getUser(id: id)).mapObject(User.self)
+    func getUser(login: String) -> Single<User> {
+        return provider.rx.request(.getUser(login: login)).mapObject(User.self)
     }
 }

@@ -31,6 +31,12 @@
 		170BB8F02484309900C4C079 /* ViewModelType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 170BB8EE2484309900C4C079 /* ViewModelType.swift */; };
 		170F257B24850A7C0094D085 /* SVProgressHUD+Rx.swift in Sources */ = {isa = PBXBuildFile; fileRef = 170F257A24850A7C0094D085 /* SVProgressHUD+Rx.swift */; };
 		170F257C24850A7C0094D085 /* SVProgressHUD+Rx.swift in Sources */ = {isa = PBXBuildFile; fileRef = 170F257A24850A7C0094D085 /* SVProgressHUD+Rx.swift */; };
+		170F258024850C3A0094D085 /* UserDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 170F257E24850C3A0094D085 /* UserDetailViewController.swift */; };
+		170F258124850C3A0094D085 /* UserDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 170F257E24850C3A0094D085 /* UserDetailViewController.swift */; };
+		170F258224850C3A0094D085 /* UserDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 170F257F24850C3A0094D085 /* UserDetailViewController.xib */; };
+		170F258324850C3A0094D085 /* UserDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 170F257F24850C3A0094D085 /* UserDetailViewController.xib */; };
+		170F258524851EE50094D085 /* UserDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 170F258424851EE50094D085 /* UserDetailViewModel.swift */; };
+		170F258624851EE50094D085 /* UserDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 170F258424851EE50094D085 /* UserDetailViewModel.swift */; };
 		171409B82484BB74009755E8 /* UserTableViewCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 171409B72484BB74009755E8 /* UserTableViewCellViewModel.swift */; };
 		171409B92484BB74009755E8 /* UserTableViewCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 171409B72484BB74009755E8 /* UserTableViewCellViewModel.swift */; };
 		20BD7B4995036846E4F5B7E1 /* Pods_EstRougeAssignmentTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 20E83A8BCBA53FC097C5A89C /* Pods_EstRougeAssignmentTests.framework */; };
@@ -67,6 +73,9 @@
 		170BB8EB24842C8600C4C079 /* UserService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserService.swift; sourceTree = "<group>"; };
 		170BB8EE2484309900C4C079 /* ViewModelType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModelType.swift; sourceTree = "<group>"; };
 		170F257A24850A7C0094D085 /* SVProgressHUD+Rx.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SVProgressHUD+Rx.swift"; sourceTree = "<group>"; };
+		170F257E24850C3A0094D085 /* UserDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDetailViewController.swift; sourceTree = "<group>"; };
+		170F257F24850C3A0094D085 /* UserDetailViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UserDetailViewController.xib; sourceTree = "<group>"; };
+		170F258424851EE50094D085 /* UserDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDetailViewModel.swift; sourceTree = "<group>"; };
 		171409B72484BB74009755E8 /* UserTableViewCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserTableViewCellViewModel.swift; sourceTree = "<group>"; };
 		171BCC71FAC303BAF072C95A /* Pods-EstRougeAssignment.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EstRougeAssignment.release.xcconfig"; path = "Target Support Files/Pods-EstRougeAssignment/Pods-EstRougeAssignment.release.xcconfig"; sourceTree = "<group>"; };
 		20E83A8BCBA53FC097C5A89C /* Pods_EstRougeAssignmentTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_EstRougeAssignmentTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -145,6 +154,7 @@
 			isa = PBXGroup;
 			children = (
 				170BB8CC2484113B00C4C079 /* UserList */,
+				170F257D24850BFD0094D085 /* UserDetail */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -200,6 +210,16 @@
 				170BB8E5248424C500C4C079 /* User.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		170F257D24850BFD0094D085 /* UserDetail */ = {
+			isa = PBXGroup;
+			children = (
+				170F257E24850C3A0094D085 /* UserDetailViewController.swift */,
+				170F257F24850C3A0094D085 /* UserDetailViewController.xib */,
+				170F258424851EE50094D085 /* UserDetailViewModel.swift */,
+			);
+			path = UserDetail;
 			sourceTree = "<group>";
 		};
 		DB1A9461C9159EADBB83E208 /* Pods */ = {
@@ -307,6 +327,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				170BB8DB2484139400C4C079 /* UserTableViewCell.xib in Resources */,
+				170F258224850C3A0094D085 /* UserDetailViewController.xib in Resources */,
 				170BB8B62483FFA400C4C079 /* LaunchScreen.storyboard in Resources */,
 				170BB8D12484116000C4C079 /* UserListViewController.xib in Resources */,
 				170BB8B32483FFA400C4C079 /* Assets.xcassets in Resources */,
@@ -319,6 +340,7 @@
 			files = (
 				170BB8DC2484139400C4C079 /* UserTableViewCell.xib in Resources */,
 				170BB8D22484116000C4C079 /* UserListViewController.xib in Resources */,
+				170F258324850C3A0094D085 /* UserDetailViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -399,10 +421,12 @@
 				170BB8E6248424C500C4C079 /* User.swift in Sources */,
 				170BB8E9248427E500C4C079 /* UserTarget.swift in Sources */,
 				170F257B24850A7C0094D085 /* SVProgressHUD+Rx.swift in Sources */,
+				170F258524851EE50094D085 /* UserDetailViewModel.swift in Sources */,
 				170BB8EF2484309900C4C079 /* ViewModelType.swift in Sources */,
 				170BB8AA2483FFA300C4C079 /* AppDelegate.swift in Sources */,
 				170BB8D4248412C700C4C079 /* UserListViewModel.swift in Sources */,
 				170BB8CF2484116000C4C079 /* UserListViewController.swift in Sources */,
+				170F258024850C3A0094D085 /* UserDetailViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -416,10 +440,12 @@
 				170BB8E7248424C500C4C079 /* User.swift in Sources */,
 				170BB8EA248427E500C4C079 /* UserTarget.swift in Sources */,
 				170F257C24850A7C0094D085 /* SVProgressHUD+Rx.swift in Sources */,
+				170F258624851EE50094D085 /* UserDetailViewModel.swift in Sources */,
 				170BB8F02484309900C4C079 /* ViewModelType.swift in Sources */,
 				170BB8C12483FFA500C4C079 /* EstRougeAssignmentTests.swift in Sources */,
 				170BB8D5248412C700C4C079 /* UserListViewModel.swift in Sources */,
 				170BB8D02484116000C4C079 /* UserListViewController.swift in Sources */,
+				170F258124850C3A0094D085 /* UserDetailViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

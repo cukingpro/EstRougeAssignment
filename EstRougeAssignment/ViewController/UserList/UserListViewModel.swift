@@ -13,11 +13,13 @@ final class UserListViewModel: ViewModel, ViewModelType {
 
     struct Input {
         let trigger: Driver<Void>
+        let selection: Driver<UserTableViewCellViewModel>
     }
 
     struct Output {
         let isLoading: Driver<Bool>
         let cellViewModels: Driver<[UserTableViewCellViewModel]>
+        let userSelected: Driver<UserDetailViewModel>
     }
 
     func transform(input: Input) -> Output {
@@ -31,6 +33,10 @@ final class UserListViewModel: ViewModel, ViewModelType {
 
         let loading = activityIndicator.asDriver()
 
-        return Output(isLoading: loading, cellViewModels: cellViewModels)
+        let userSelected = input.selection.map({ UserDetailViewModel(user: $0.user) })
+
+        return Output(isLoading: loading,
+                      cellViewModels: cellViewModels,
+                      userSelected: userSelected)
     }
 }
