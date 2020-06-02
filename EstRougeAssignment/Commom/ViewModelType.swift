@@ -19,6 +19,4 @@ protocol ViewModelType {
 class ViewModel {
 
     let activityIndicator = ActivityIndicator()
-
-    let userService = UserService()
 }

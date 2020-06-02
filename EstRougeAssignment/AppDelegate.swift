@@ -8,6 +8,7 @@
 
 import UIKit
 import SVProgressHUD
+import Reachability
 
 typealias HUD = SVProgressHUD
 
@@ -16,9 +17,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
 
+    var reachability: Reachability?
+
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        setupRootViewController()
         configHUD()
+        configReachability()
+        setupRootViewController()
         return true
     }
 
@@ -36,6 +40,11 @@ extension AppDelegate {
 
     private func configHUD() {
         SVProgressHUD.setDefaultMaskType(.black)
+    }
+
+    private func configReachability() {
+        reachability = try? Reachability()
+        try? reachability?.startNotifier()
     }
 }
 

@@ -39,6 +39,10 @@
 		170F258624851EE50094D085 /* UserDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 170F258424851EE50094D085 /* UserDetailViewModel.swift */; };
 		171409B82484BB74009755E8 /* UserTableViewCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 171409B72484BB74009755E8 /* UserTableViewCellViewModel.swift */; };
 		171409B92484BB74009755E8 /* UserTableViewCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 171409B72484BB74009755E8 /* UserTableViewCellViewModel.swift */; };
+		177F53ED24861A2900E474B2 /* UserRealmService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 177F53EC24861A2900E474B2 /* UserRealmService.swift */; };
+		177F53EE24861A2900E474B2 /* UserRealmService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 177F53EC24861A2900E474B2 /* UserRealmService.swift */; };
+		17C94C9324857A680023F4FB /* RealmManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17C94C9224857A680023F4FB /* RealmManager.swift */; };
+		17C94C9424857A680023F4FB /* RealmManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17C94C9224857A680023F4FB /* RealmManager.swift */; };
 		20BD7B4995036846E4F5B7E1 /* Pods_EstRougeAssignmentTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 20E83A8BCBA53FC097C5A89C /* Pods_EstRougeAssignmentTests.framework */; };
 		99740D29071B3E43DDC45217 /* Pods_EstRougeAssignment.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 051DE4A7ECE66BA0ABCE87AA /* Pods_EstRougeAssignment.framework */; };
 /* End PBXBuildFile section */
@@ -78,6 +82,8 @@
 		170F258424851EE50094D085 /* UserDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDetailViewModel.swift; sourceTree = "<group>"; };
 		171409B72484BB74009755E8 /* UserTableViewCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserTableViewCellViewModel.swift; sourceTree = "<group>"; };
 		171BCC71FAC303BAF072C95A /* Pods-EstRougeAssignment.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EstRougeAssignment.release.xcconfig"; path = "Target Support Files/Pods-EstRougeAssignment/Pods-EstRougeAssignment.release.xcconfig"; sourceTree = "<group>"; };
+		177F53EC24861A2900E474B2 /* UserRealmService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserRealmService.swift; sourceTree = "<group>"; };
+		17C94C9224857A680023F4FB /* RealmManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmManager.swift; sourceTree = "<group>"; };
 		20E83A8BCBA53FC097C5A89C /* Pods_EstRougeAssignmentTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_EstRougeAssignmentTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9C8B5C9CCA4627F8DCB9FBF2 /* Pods-EstRougeAssignmentTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EstRougeAssignmentTests.debug.xcconfig"; path = "Target Support Files/Pods-EstRougeAssignmentTests/Pods-EstRougeAssignmentTests.debug.xcconfig"; sourceTree = "<group>"; };
 		C0B7F85DD9B134C74867F7BD /* Pods-EstRougeAssignmentTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EstRougeAssignmentTests.release.xcconfig"; path = "Target Support Files/Pods-EstRougeAssignmentTests/Pods-EstRougeAssignmentTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -133,6 +139,7 @@
 				170BB8CB2484111400C4C079 /* ViewController */,
 				170BB8D62484136200C4C079 /* Cell */,
 				170BB8E22484235400C4C079 /* Networking */,
+				17C94C9124857A460023F4FB /* Database */,
 				170BB8E42484243600C4C079 /* Model */,
 				170BB8B22483FFA400C4C079 /* Assets.xcassets */,
 				170BB8B42483FFA400C4C079 /* LaunchScreen.storyboard */,
@@ -220,6 +227,15 @@
 				170F258424851EE50094D085 /* UserDetailViewModel.swift */,
 			);
 			path = UserDetail;
+			sourceTree = "<group>";
+		};
+		17C94C9124857A460023F4FB /* Database */ = {
+			isa = PBXGroup;
+			children = (
+				17C94C9224857A680023F4FB /* RealmManager.swift */,
+				177F53EC24861A2900E474B2 /* UserRealmService.swift */,
+			);
+			path = Database;
 			sourceTree = "<group>";
 		};
 		DB1A9461C9159EADBB83E208 /* Pods */ = {
@@ -415,6 +431,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				17C94C9324857A680023F4FB /* RealmManager.swift in Sources */,
 				171409B82484BB74009755E8 /* UserTableViewCellViewModel.swift in Sources */,
 				170BB8EC24842C8600C4C079 /* UserService.swift in Sources */,
 				170BB8D92484139400C4C079 /* UserTableViewCell.swift in Sources */,
@@ -427,6 +444,7 @@
 				170BB8D4248412C700C4C079 /* UserListViewModel.swift in Sources */,
 				170BB8CF2484116000C4C079 /* UserListViewController.swift in Sources */,
 				170F258024850C3A0094D085 /* UserDetailViewController.swift in Sources */,
+				177F53ED24861A2900E474B2 /* UserRealmService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -434,6 +452,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				17C94C9424857A680023F4FB /* RealmManager.swift in Sources */,
 				171409B92484BB74009755E8 /* UserTableViewCellViewModel.swift in Sources */,
 				170BB8ED24842C8600C4C079 /* UserService.swift in Sources */,
 				170BB8DA2484139400C4C079 /* UserTableViewCell.swift in Sources */,
@@ -446,6 +465,7 @@
 				170BB8D5248412C700C4C079 /* UserListViewModel.swift in Sources */,
 				170BB8D02484116000C4C079 /* UserListViewController.swift in Sources */,
 				170F258124850C3A0094D085 /* UserDetailViewController.swift in Sources */,
+				177F53EE24861A2900E474B2 /* UserRealmService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

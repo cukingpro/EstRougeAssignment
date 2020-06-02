@@ -10,6 +10,7 @@ import Foundation
 import RxSwift
 import RxCocoa
 import NSObject_Rx
+import Reachability
 
 final class UserDetailViewModel: ViewModel, ViewModelType, HasDisposeBag {
 
@@ -37,9 +38,21 @@ final class UserDetailViewModel: ViewModel, ViewModelType, HasDisposeBag {
 
     func transform(input: Input) -> Output {
         input.trigger.withLatestFrom(user.asDriver()).flatMapLatest { user -> Driver<User> in
-            self.userService.getUser(login: user.login)
-                .trackActivity(self.activityIndicator)
-                .asDriver(onErrorJustReturn: User())
+            let reachability = try! Reachability()
+            let isReachable = reachability.connection != .unavailable
+            if isReachable {
+                return UserService.shared.getUser(login: user.login)
+                    .trackActivity(self.activityIndicator)
+                    .asDriver(onErrorJustReturn: User())
+                    .do(onNext: { user in
+                        RealmManager.shared.add(object: user)
+                    })
+            } else {
+                return UserRealmService.shared.getUser(login: user.login)
+                    .trackActivity(self.activityIndicator)
+                    .asDriver(onErrorJustReturn: User())
+            }
+
         }.drive(user).disposed(by: disposeBag)
 
         let isLoading = activityIndicator.asDriver()
@@ -60,6 +73,4 @@ final class UserDetailViewModel: ViewModel, ViewModelType, HasDisposeBag {
                       followers: followers,
                       following: following)
     }
-
-    
 }

@@ -21,6 +21,12 @@ PODS:
   - "NSObject+Rx (5.1.0)":
     - RxSwift (~> 5.1)
   - ObjectMapper (4.2.0)
+  - ReachabilitySwift (5.0.0)
+  - Realm (5.0.1):
+    - Realm/Headers (= 5.0.1)
+  - Realm/Headers (5.0.1)
+  - RealmSwift (5.0.1):
+    - Realm (= 5.0.1)
   - RxCocoa (5.1.1):
     - RxRelay (~> 5)
     - RxSwift (~> 5)
@@ -75,6 +81,8 @@ DEPENDENCIES:
   - Moya/RxSwift
   - "NSObject+Rx"
   - ObjectMapper
+  - ReachabilitySwift
+  - RealmSwift
   - RxSwiftExt
   - RxSwiftUtilities (from `https://github.com/RxSwiftCommunity/RxSwiftUtilities.git`, branch `master`)
   - RxViewController
@@ -90,6 +98,9 @@ SPEC REPOS:
     - Moya-ObjectMapper
     - "NSObject+Rx"
     - ObjectMapper
+    - ReachabilitySwift
+    - Realm
+    - RealmSwift
     - RxCocoa
     - RxRelay
     - RxSwift
@@ -116,6 +127,9 @@ SPEC CHECKSUMS:
   Moya-ObjectMapper: 967a99d9ea3aa9c93ddbe112aeca3667f53bfe93
   "NSObject+Rx": fa6bbcc1ab1faa06b01466bc09b1e0692bbc5946
   ObjectMapper: 1eb41f610210777375fa806bf161dc39fb832b81
+  ReachabilitySwift: 985039c6f7b23a1da463388634119492ff86c825
+  Realm: d36cfc336d76d2e15b13651beb6050f49354de4b
+  RealmSwift: f29ae0ceaf4fbaf4803c40bbebd838ea2beb903a
   RxCocoa: 32065309a38d29b5b0db858819b5bf9ef038b601
   RxRelay: d77f7d771495f43c556cbc43eebd1bb54d01e8e9
   RxSwift: 81470a2074fa8780320ea5fe4102807cb7118178
@@ -125,6 +139,6 @@ SPEC CHECKSUMS:
   SVProgressHUD: 1428aafac632c1f86f62aa4243ec12008d7a51d6
   SwifterSwift: 334181863c416882d97b7a60c05054d9e4d799e2
 
-PODFILE CHECKSUM: 3f1f13823e149bcd184fe37c8745a1b5d473d089
+PODFILE CHECKSUM: e93245dd885de5ef348a99cccd38e302185db6d3
 
 COCOAPODS: 1.9.2

@@ -17,6 +17,8 @@ target 'EstRougeAssignment' do
   pod 'RxSwiftExt'
   pod 'NSObject+Rx'
   pod 'SwifterSwift'
+  pod 'ReachabilitySwift'
+  pod 'RealmSwift'
 
   target 'EstRougeAssignmentTests' do
     inherit! :search_paths

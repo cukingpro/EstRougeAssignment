@@ -7,18 +7,20 @@
 //
 
 import ObjectMapper
+import RealmSwift
 
-final class User: Mappable {
-    var id: Int = 0
-    var login: String = ""
-    var avatarUrl: String = ""
-    var name: String = ""
-    var location: String = ""
-    var bio: String = ""
-    var htmlUrl: String = ""
-    var publicRepos: Int = 0
-    var followers: Int = 0
-    var following: Int = 0
+@objcMembers final class User: Object, Mappable {
+
+    dynamic var id: Int = 0
+    dynamic var login: String = ""
+    dynamic var avatarUrl: String = ""
+    dynamic var name: String = ""
+    dynamic var location: String = ""
+    dynamic var bio: String = ""
+    dynamic var htmlUrl: String = ""
+    dynamic var publicRepos: Int = 0
+    dynamic var followers: Int = 0
+    dynamic var following: Int = 0
 
     required convenience init?(map: Map) {
         self.init()
@@ -36,4 +38,9 @@ final class User: Mappable {
         followers <- map["followers"]
         following <- map["following"]
     }
+
+    override class func primaryKey() -> String? {
+        return "id"
+    }
+
 }

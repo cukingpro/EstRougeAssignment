@@ -8,6 +8,9 @@
 
 import Foundation
 import RxCocoa
+import Reachability
+import RxSwift
+import RealmSwift
 
 final class UserListViewModel: ViewModel, ViewModelType {
 
@@ -23,13 +26,27 @@ final class UserListViewModel: ViewModel, ViewModelType {
     }
 
     func transform(input: Input) -> Output {
-        let cellViewModels = input.trigger.flatMapLatest { [unowned self] _ -> Driver<[User]> in
-            return self.userService.getUsers().trackActivity(self.activityIndicator).asDriver(onErrorJustReturn: [])
-        }.map({ users in
-            users.map({ user in
-                UserTableViewCellViewModel(user: user)
+        let cellViewModels = input.trigger
+            .flatMapLatest { _ -> Driver<[User]> in
+                let reachability = try! Reachability()
+                let isReachable = reachability.connection != .unavailable
+                if isReachable {
+                    return UserService.shared.getUsers()
+                        .trackActivity(self.activityIndicator)
+                        .asDriver(onErrorJustReturn: [])
+                        .do(onNext: { users in
+                            RealmManager.shared.add(objects: users)
+                        })
+                } else {
+                    return UserRealmService.shared.getUsers()
+                        .trackActivity(self.activityIndicator)
+                        .asDriver(onErrorJustReturn: [])
+                }
+            }.map({ users in
+                users.map({ user in
+                    UserTableViewCellViewModel(user: user)
+                })
             })
-        })
 
         let loading = activityIndicator.asDriver()
 

@@ -13,6 +13,10 @@ import Moya_ObjectMapper
 
 final class UserService {
 
+    private init() { }
+
+    static let shared = UserService()
+
     // MARK: - Properties
 
     let provider = MoyaProvider<UserTarget>()

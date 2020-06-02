@@ -34,6 +34,7 @@ class UserTableViewCell: UITableViewCell {
         super.prepareForReuse()
         var mutatingSelf = self
         mutatingSelf.rx.disposeBag = DisposeBag()
+        avatarImageView.image = nil
     }
     
 }
