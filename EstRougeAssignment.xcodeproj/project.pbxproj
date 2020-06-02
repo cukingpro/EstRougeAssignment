@@ -127,7 +127,7 @@
 			isa = PBXGroup;
 			children = (
 				170BB8A92483FFA300C4C079 /* AppDelegate.swift */,
-				170BB8E32484238B00C4C079 /* Commom */,
+				170BB8E32484238B00C4C079 /* Common */,
 				170BB8DD2484139D00C4C079 /* Extension */,
 				170BB8CB2484111400C4C079 /* ViewController */,
 				170BB8D62484136200C4C079 /* Cell */,
@@ -200,12 +200,12 @@
 			path = Networking;
 			sourceTree = "<group>";
 		};
-		170BB8E32484238B00C4C079 /* Commom */ = {
+		170BB8E32484238B00C4C079 /* Common */ = {
 			isa = PBXGroup;
 			children = (
 				170BB8EE2484309900C4C079 /* ViewModelType.swift */,
 			);
-			path = Commom;
+			path = Common;
 			sourceTree = "<group>";
 		};
 		170BB8E42484243600C4C079 /* Model */ = {
