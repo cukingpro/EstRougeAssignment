@@ -9,6 +9,7 @@
 import UIKit
 import RxSwift
 import RxCocoa
+import SVProgressHUD
 
 class UserDetailViewController: UIViewController {
 
@@ -64,7 +65,7 @@ class UserDetailViewController: UIViewController {
                 self?.avatarImageView.af.setImage(withURL: url)
             }
         }).disposed(by: rx.disposeBag)
-        output.isLoading.drive(HUD.rx.isAnimating).disposed(by: rx.disposeBag)
+        output.isLoading.drive(SVProgressHUD.rx.isAnimating).disposed(by: rx.disposeBag)
         output.isLoading.skip(1).drive(refreshControl.rx.isRefreshing).disposed(by: rx.disposeBag)
         output.name.drive(nameLabel.rx.text).disposed(by: rx.disposeBag)
         output.location.drive(locationLabel.rx.text).disposed(by: rx.disposeBag)

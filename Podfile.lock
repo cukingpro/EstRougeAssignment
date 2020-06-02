@@ -18,15 +18,32 @@ PODS:
   - Moya/RxSwift (14.0.0):
     - Moya/Core
     - RxSwift (~> 5.0)
+  - Nimble (8.0.9)
   - "NSObject+Rx (5.1.0)":
     - RxSwift (~> 5.1)
   - ObjectMapper (4.2.0)
+  - OHHTTPStubs/Core (9.0.0)
+  - OHHTTPStubs/Default (9.0.0):
+    - OHHTTPStubs/Core
+    - OHHTTPStubs/JSON
+    - OHHTTPStubs/NSURLSession
+    - OHHTTPStubs/OHPathHelpers
+  - OHHTTPStubs/JSON (9.0.0):
+    - OHHTTPStubs/Core
+  - OHHTTPStubs/NSURLSession (9.0.0):
+    - OHHTTPStubs/Core
+  - OHHTTPStubs/OHPathHelpers (9.0.0)
+  - OHHTTPStubs/Swift (9.0.0):
+    - OHHTTPStubs/Default
+  - Quick (2.2.0)
   - ReachabilitySwift (5.0.0)
   - Realm (5.0.1):
     - Realm/Headers (= 5.0.1)
   - Realm/Headers (5.0.1)
   - RealmSwift (5.0.1):
     - Realm (= 5.0.1)
+  - RxBlocking (5.1.1):
+    - RxSwift (~> 5)
   - RxCocoa (5.1.1):
     - RxRelay (~> 5)
     - RxSwift (~> 5)
@@ -79,10 +96,14 @@ DEPENDENCIES:
   - AlamofireNetworkActivityIndicator
   - Moya-ObjectMapper/RxSwift
   - Moya/RxSwift
+  - Nimble
   - "NSObject+Rx"
   - ObjectMapper
+  - OHHTTPStubs/Swift
+  - Quick
   - ReachabilitySwift
   - RealmSwift
+  - RxBlocking
   - RxSwiftExt
   - RxSwiftUtilities (from `https://github.com/RxSwiftCommunity/RxSwiftUtilities.git`, branch `master`)
   - RxViewController
@@ -96,11 +117,15 @@ SPEC REPOS:
     - AlamofireNetworkActivityIndicator
     - Moya
     - Moya-ObjectMapper
+    - Nimble
     - "NSObject+Rx"
     - ObjectMapper
+    - OHHTTPStubs
+    - Quick
     - ReachabilitySwift
     - Realm
     - RealmSwift
+    - RxBlocking
     - RxCocoa
     - RxRelay
     - RxSwift
@@ -125,11 +150,15 @@ SPEC CHECKSUMS:
   AlamofireNetworkActivityIndicator: 6564782bd7b9e6c430ae67d9277af01907b01ca4
   Moya: 5b45dacb75adb009f97fde91c204c1e565d31916
   Moya-ObjectMapper: 967a99d9ea3aa9c93ddbe112aeca3667f53bfe93
+  Nimble: 98b888285a615fd34f20e61753cf58ea1402bde4
   "NSObject+Rx": fa6bbcc1ab1faa06b01466bc09b1e0692bbc5946
   ObjectMapper: 1eb41f610210777375fa806bf161dc39fb832b81
+  OHHTTPStubs: cb29d2a9d09a828ecb93349a2b0c64f99e0db89f
+  Quick: 7fb19e13be07b5dfb3b90d4f9824c855a11af40e
   ReachabilitySwift: 985039c6f7b23a1da463388634119492ff86c825
   Realm: d36cfc336d76d2e15b13651beb6050f49354de4b
   RealmSwift: f29ae0ceaf4fbaf4803c40bbebd838ea2beb903a
+  RxBlocking: 5f700a78cad61ce253ebd37c9a39b5ccc76477b4
   RxCocoa: 32065309a38d29b5b0db858819b5bf9ef038b601
   RxRelay: d77f7d771495f43c556cbc43eebd1bb54d01e8e9
   RxSwift: 81470a2074fa8780320ea5fe4102807cb7118178
@@ -139,6 +168,6 @@ SPEC CHECKSUMS:
   SVProgressHUD: 1428aafac632c1f86f62aa4243ec12008d7a51d6
   SwifterSwift: 334181863c416882d97b7a60c05054d9e4d799e2
 
-PODFILE CHECKSUM: e93245dd885de5ef348a99cccd38e302185db6d3
+PODFILE CHECKSUM: c79630cbb212b3f5c687775dff4a4cf9f0db1bbb
 
 COCOAPODS: 1.9.2

@@ -12,37 +12,26 @@
 		170BB8B62483FFA400C4C079 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 170BB8B42483FFA400C4C079 /* LaunchScreen.storyboard */; };
 		170BB8C12483FFA500C4C079 /* EstRougeAssignmentTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 170BB8C02483FFA500C4C079 /* EstRougeAssignmentTests.swift */; };
 		170BB8CF2484116000C4C079 /* UserListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 170BB8CD2484116000C4C079 /* UserListViewController.swift */; };
-		170BB8D02484116000C4C079 /* UserListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 170BB8CD2484116000C4C079 /* UserListViewController.swift */; };
 		170BB8D12484116000C4C079 /* UserListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 170BB8CE2484116000C4C079 /* UserListViewController.xib */; };
 		170BB8D22484116000C4C079 /* UserListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 170BB8CE2484116000C4C079 /* UserListViewController.xib */; };
 		170BB8D4248412C700C4C079 /* UserListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 170BB8D3248412C700C4C079 /* UserListViewModel.swift */; };
-		170BB8D5248412C700C4C079 /* UserListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 170BB8D3248412C700C4C079 /* UserListViewModel.swift */; };
 		170BB8D92484139400C4C079 /* UserTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 170BB8D72484139400C4C079 /* UserTableViewCell.swift */; };
-		170BB8DA2484139400C4C079 /* UserTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 170BB8D72484139400C4C079 /* UserTableViewCell.swift */; };
 		170BB8DB2484139400C4C079 /* UserTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 170BB8D82484139400C4C079 /* UserTableViewCell.xib */; };
-		170BB8DC2484139400C4C079 /* UserTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 170BB8D82484139400C4C079 /* UserTableViewCell.xib */; };
 		170BB8E6248424C500C4C079 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 170BB8E5248424C500C4C079 /* User.swift */; };
-		170BB8E7248424C500C4C079 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 170BB8E5248424C500C4C079 /* User.swift */; };
 		170BB8E9248427E500C4C079 /* UserTarget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 170BB8E8248427E500C4C079 /* UserTarget.swift */; };
-		170BB8EA248427E500C4C079 /* UserTarget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 170BB8E8248427E500C4C079 /* UserTarget.swift */; };
 		170BB8EC24842C8600C4C079 /* UserService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 170BB8EB24842C8600C4C079 /* UserService.swift */; };
-		170BB8ED24842C8600C4C079 /* UserService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 170BB8EB24842C8600C4C079 /* UserService.swift */; };
 		170BB8EF2484309900C4C079 /* ViewModelType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 170BB8EE2484309900C4C079 /* ViewModelType.swift */; };
-		170BB8F02484309900C4C079 /* ViewModelType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 170BB8EE2484309900C4C079 /* ViewModelType.swift */; };
 		170F257B24850A7C0094D085 /* SVProgressHUD+Rx.swift in Sources */ = {isa = PBXBuildFile; fileRef = 170F257A24850A7C0094D085 /* SVProgressHUD+Rx.swift */; };
-		170F257C24850A7C0094D085 /* SVProgressHUD+Rx.swift in Sources */ = {isa = PBXBuildFile; fileRef = 170F257A24850A7C0094D085 /* SVProgressHUD+Rx.swift */; };
 		170F258024850C3A0094D085 /* UserDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 170F257E24850C3A0094D085 /* UserDetailViewController.swift */; };
-		170F258124850C3A0094D085 /* UserDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 170F257E24850C3A0094D085 /* UserDetailViewController.swift */; };
 		170F258224850C3A0094D085 /* UserDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 170F257F24850C3A0094D085 /* UserDetailViewController.xib */; };
-		170F258324850C3A0094D085 /* UserDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 170F257F24850C3A0094D085 /* UserDetailViewController.xib */; };
 		170F258524851EE50094D085 /* UserDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 170F258424851EE50094D085 /* UserDetailViewModel.swift */; };
-		170F258624851EE50094D085 /* UserDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 170F258424851EE50094D085 /* UserDetailViewModel.swift */; };
 		171409B82484BB74009755E8 /* UserTableViewCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 171409B72484BB74009755E8 /* UserTableViewCellViewModel.swift */; };
-		171409B92484BB74009755E8 /* UserTableViewCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 171409B72484BB74009755E8 /* UserTableViewCellViewModel.swift */; };
 		177F53ED24861A2900E474B2 /* UserRealmService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 177F53EC24861A2900E474B2 /* UserRealmService.swift */; };
-		177F53EE24861A2900E474B2 /* UserRealmService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 177F53EC24861A2900E474B2 /* UserRealmService.swift */; };
 		17C94C9324857A680023F4FB /* RealmManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17C94C9224857A680023F4FB /* RealmManager.swift */; };
-		17C94C9424857A680023F4FB /* RealmManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17C94C9224857A680023F4FB /* RealmManager.swift */; };
+		17D92C6B24866F24009C7C9D /* UserListViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17D92C6A24866F24009C7C9D /* UserListViewModelTests.swift */; };
+		17D92C6F2486A34E009C7C9D /* Users.json in Resources */ = {isa = PBXBuildFile; fileRef = 17D92C6E2486A34E009C7C9D /* Users.json */; };
+		17D92C712486A3C6009C7C9D /* User.json in Resources */ = {isa = PBXBuildFile; fileRef = 17D92C702486A3C6009C7C9D /* User.json */; };
+		17D92C732486B115009C7C9D /* UserDetailViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17D92C722486B115009C7C9D /* UserDetailViewModelTests.swift */; };
 		20BD7B4995036846E4F5B7E1 /* Pods_EstRougeAssignmentTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 20E83A8BCBA53FC097C5A89C /* Pods_EstRougeAssignmentTests.framework */; };
 		99740D29071B3E43DDC45217 /* Pods_EstRougeAssignment.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 051DE4A7ECE66BA0ABCE87AA /* Pods_EstRougeAssignment.framework */; };
 /* End PBXBuildFile section */
@@ -84,6 +73,10 @@
 		171BCC71FAC303BAF072C95A /* Pods-EstRougeAssignment.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EstRougeAssignment.release.xcconfig"; path = "Target Support Files/Pods-EstRougeAssignment/Pods-EstRougeAssignment.release.xcconfig"; sourceTree = "<group>"; };
 		177F53EC24861A2900E474B2 /* UserRealmService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserRealmService.swift; sourceTree = "<group>"; };
 		17C94C9224857A680023F4FB /* RealmManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmManager.swift; sourceTree = "<group>"; };
+		17D92C6A24866F24009C7C9D /* UserListViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserListViewModelTests.swift; sourceTree = "<group>"; };
+		17D92C6E2486A34E009C7C9D /* Users.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Users.json; sourceTree = "<group>"; };
+		17D92C702486A3C6009C7C9D /* User.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = User.json; sourceTree = "<group>"; };
+		17D92C722486B115009C7C9D /* UserDetailViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDetailViewModelTests.swift; sourceTree = "<group>"; };
 		20E83A8BCBA53FC097C5A89C /* Pods_EstRougeAssignmentTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_EstRougeAssignmentTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9C8B5C9CCA4627F8DCB9FBF2 /* Pods-EstRougeAssignmentTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EstRougeAssignmentTests.debug.xcconfig"; path = "Target Support Files/Pods-EstRougeAssignmentTests/Pods-EstRougeAssignmentTests.debug.xcconfig"; sourceTree = "<group>"; };
 		C0B7F85DD9B134C74867F7BD /* Pods-EstRougeAssignmentTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EstRougeAssignmentTests.release.xcconfig"; path = "Target Support Files/Pods-EstRougeAssignmentTests/Pods-EstRougeAssignmentTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -153,6 +146,10 @@
 			children = (
 				170BB8C02483FFA500C4C079 /* EstRougeAssignmentTests.swift */,
 				170BB8C22483FFA500C4C079 /* Info.plist */,
+				17D92C6A24866F24009C7C9D /* UserListViewModelTests.swift */,
+				17D92C722486B115009C7C9D /* UserDetailViewModelTests.swift */,
+				17D92C6E2486A34E009C7C9D /* Users.json */,
+				17D92C702486A3C6009C7C9D /* User.json */,
 			);
 			path = EstRougeAssignmentTests;
 			sourceTree = "<group>";
@@ -288,6 +285,7 @@
 				170BB8B82483FFA400C4C079 /* Sources */,
 				170BB8B92483FFA400C4C079 /* Frameworks */,
 				170BB8BA2483FFA400C4C079 /* Resources */,
+				D359C96476766DB1798457AA /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -354,9 +352,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				170BB8DC2484139400C4C079 /* UserTableViewCell.xib in Resources */,
+				17D92C712486A3C6009C7C9D /* User.json in Resources */,
 				170BB8D22484116000C4C079 /* UserListViewController.xib in Resources */,
-				170F258324850C3A0094D085 /* UserDetailViewController.xib in Resources */,
+				17D92C6F2486A34E009C7C9D /* Users.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -424,6 +422,23 @@
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-EstRougeAssignment/Pods-EstRougeAssignment-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
+		D359C96476766DB1798457AA /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-EstRougeAssignmentTests/Pods-EstRougeAssignmentTests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-EstRougeAssignmentTests/Pods-EstRougeAssignmentTests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-EstRougeAssignmentTests/Pods-EstRougeAssignmentTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -452,20 +467,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				17C94C9424857A680023F4FB /* RealmManager.swift in Sources */,
-				171409B92484BB74009755E8 /* UserTableViewCellViewModel.swift in Sources */,
-				170BB8ED24842C8600C4C079 /* UserService.swift in Sources */,
-				170BB8DA2484139400C4C079 /* UserTableViewCell.swift in Sources */,
-				170BB8E7248424C500C4C079 /* User.swift in Sources */,
-				170BB8EA248427E500C4C079 /* UserTarget.swift in Sources */,
-				170F257C24850A7C0094D085 /* SVProgressHUD+Rx.swift in Sources */,
-				170F258624851EE50094D085 /* UserDetailViewModel.swift in Sources */,
-				170BB8F02484309900C4C079 /* ViewModelType.swift in Sources */,
+				17D92C6B24866F24009C7C9D /* UserListViewModelTests.swift in Sources */,
+				17D92C732486B115009C7C9D /* UserDetailViewModelTests.swift in Sources */,
 				170BB8C12483FFA500C4C079 /* EstRougeAssignmentTests.swift in Sources */,
-				170BB8D5248412C700C4C079 /* UserListViewModel.swift in Sources */,
-				170BB8D02484116000C4C079 /* UserListViewController.swift in Sources */,
-				170F258124850C3A0094D085 /* UserDetailViewController.swift in Sources */,
-				177F53EE24861A2900E474B2 /* UserRealmService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

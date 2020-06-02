@@ -14,6 +14,7 @@ import RxViewController
 import NSObject_Rx
 import RxSwiftExt
 import Reachability
+import SVProgressHUD
 
 final class UserListViewController: UIViewController {
 
@@ -68,7 +69,7 @@ final class UserListViewController: UIViewController {
         }
         .disposed(by: rx.disposeBag)
 
-        output.isLoading.drive(HUD.rx.isAnimating).disposed(by: rx.disposeBag)
+        output.isLoading.drive(SVProgressHUD.rx.isAnimating).disposed(by: rx.disposeBag)
         output.isLoading.skip(1).drive(refreshControl.rx.isRefreshing).disposed(by: rx.disposeBag)
 
         output.userSelected.drive(onNext: { [weak self] userDetailViewModel in

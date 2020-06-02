@@ -23,6 +23,10 @@ target 'EstRougeAssignment' do
   target 'EstRougeAssignmentTests' do
     inherit! :search_paths
     # Pods for testing
+    pod 'Nimble'
+    pod 'Quick'
+    pod 'OHHTTPStubs/Swift'
+    pod 'RxBlocking'
   end
 
 end

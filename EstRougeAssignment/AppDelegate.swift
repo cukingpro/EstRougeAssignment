@@ -10,8 +10,6 @@ import UIKit
 import SVProgressHUD
 import Reachability
 
-typealias HUD = SVProgressHUD
-
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
