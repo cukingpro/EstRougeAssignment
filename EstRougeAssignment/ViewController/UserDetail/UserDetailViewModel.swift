@@ -20,6 +20,7 @@ final class UserDetailViewModel: ViewModel, ViewModelType, HasDisposeBag {
 
     struct Output {
         let isLoading: Driver<Bool>
+        let error: Driver<Error>
         let name: Driver<String>
         let location: Driver<String>
         let avatarUrl: Driver<String>
@@ -37,12 +38,14 @@ final class UserDetailViewModel: ViewModel, ViewModelType, HasDisposeBag {
     }
 
     func transform(input: Input) -> Output {
-        input.trigger.withLatestFrom(user.asDriver()).flatMapLatest { user -> Driver<User> in
+        input.trigger.withLatestFrom(user.asDriver()).flatMapLatest { [weak self] user -> Driver<User> in
+            guard let self = self else { return Driver.empty() }
             let reachability = try! Reachability()
             let isReachable = reachability.connection != .unavailable
             if isReachable {
                 return UserService.shared.getUser(login: user.login)
                     .trackActivity(self.activityIndicator)
+                    .trackError(self.error)
                     .asDriver(onErrorJustReturn: User())
                     .do(onNext: { user in
                         RealmManager.shared.add(object: user)
@@ -50,12 +53,13 @@ final class UserDetailViewModel: ViewModel, ViewModelType, HasDisposeBag {
             } else {
                 return UserRealmService.shared.getUser(login: user.login)
                     .trackActivity(self.activityIndicator)
+                    .trackError(self.error)
                     .asDriver(onErrorJustReturn: User())
             }
-
         }.drive(user).disposed(by: disposeBag)
 
         let isLoading = activityIndicator.asDriver()
+        let error = self.error.asDriver()
         let name = user.map({ $0.name }).asDriver(onErrorJustReturn: "")
         let location = user.map({ $0.location }).asDriver(onErrorJustReturn: "")
         let avatarUrl = user.map({ $0.avatarUrl }).asDriver(onErrorJustReturn: "")
@@ -65,6 +69,7 @@ final class UserDetailViewModel: ViewModel, ViewModelType, HasDisposeBag {
         let following = user.map({ $0.following.string }).asDriver(onErrorJustReturn: "")
 
         return Output(isLoading: isLoading,
+                      error: error,
                       name: name,
                       location: location,
                       avatarUrl: avatarUrl,

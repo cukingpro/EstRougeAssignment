@@ -73,5 +73,8 @@ class UserDetailViewController: UIViewController {
         output.publicRepos.drive(publicRepoLabel.rx.text).disposed(by: rx.disposeBag)
         output.followers.drive(followersLabel.rx.text).disposed(by: rx.disposeBag)
         output.following.drive(followingLabel.rx.text).disposed(by: rx.disposeBag)
+        output.error.drive(onNext: { [weak self] error in
+            self?.showAlert(title: "Error", message: error.localizedDescription)
+        }).disposed(by: rx.disposeBag)
     }
 }

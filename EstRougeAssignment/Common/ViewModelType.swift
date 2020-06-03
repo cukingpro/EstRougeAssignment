@@ -19,4 +19,5 @@ protocol ViewModelType {
 class ViewModel {
 
     let activityIndicator = ActivityIndicator()
+    let error = ErrorTracker()
 }

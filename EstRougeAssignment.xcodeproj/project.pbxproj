@@ -26,6 +26,7 @@
 		170F258224850C3A0094D085 /* UserDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 170F257F24850C3A0094D085 /* UserDetailViewController.xib */; };
 		170F258524851EE50094D085 /* UserDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 170F258424851EE50094D085 /* UserDetailViewModel.swift */; };
 		171409B82484BB74009755E8 /* UserTableViewCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 171409B72484BB74009755E8 /* UserTableViewCellViewModel.swift */; };
+		17469D7C2487467800CF6ECA /* ErrorTracker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17469D7B2487467800CF6ECA /* ErrorTracker.swift */; };
 		177F53ED24861A2900E474B2 /* UserRealmService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 177F53EC24861A2900E474B2 /* UserRealmService.swift */; };
 		17C94C9324857A680023F4FB /* RealmManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17C94C9224857A680023F4FB /* RealmManager.swift */; };
 		17D92C6B24866F24009C7C9D /* UserListViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17D92C6A24866F24009C7C9D /* UserListViewModelTests.swift */; };
@@ -71,6 +72,7 @@
 		170F258424851EE50094D085 /* UserDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDetailViewModel.swift; sourceTree = "<group>"; };
 		171409B72484BB74009755E8 /* UserTableViewCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserTableViewCellViewModel.swift; sourceTree = "<group>"; };
 		171BCC71FAC303BAF072C95A /* Pods-EstRougeAssignment.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EstRougeAssignment.release.xcconfig"; path = "Target Support Files/Pods-EstRougeAssignment/Pods-EstRougeAssignment.release.xcconfig"; sourceTree = "<group>"; };
+		17469D7B2487467800CF6ECA /* ErrorTracker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ErrorTracker.swift; sourceTree = "<group>"; };
 		177F53EC24861A2900E474B2 /* UserRealmService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserRealmService.swift; sourceTree = "<group>"; };
 		17C94C9224857A680023F4FB /* RealmManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmManager.swift; sourceTree = "<group>"; };
 		17D92C6A24866F24009C7C9D /* UserListViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserListViewModelTests.swift; sourceTree = "<group>"; };
@@ -204,6 +206,7 @@
 			isa = PBXGroup;
 			children = (
 				170BB8EE2484309900C4C079 /* ViewModelType.swift */,
+				17469D7B2487467800CF6ECA /* ErrorTracker.swift */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -450,6 +453,7 @@
 				171409B82484BB74009755E8 /* UserTableViewCellViewModel.swift in Sources */,
 				170BB8EC24842C8600C4C079 /* UserService.swift in Sources */,
 				170BB8D92484139400C4C079 /* UserTableViewCell.swift in Sources */,
+				17469D7C2487467800CF6ECA /* ErrorTracker.swift in Sources */,
 				170BB8E6248424C500C4C079 /* User.swift in Sources */,
 				170BB8E9248427E500C4C079 /* UserTarget.swift in Sources */,
 				170F257B24850A7C0094D085 /* SVProgressHUD+Rx.swift in Sources */,

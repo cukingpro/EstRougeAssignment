@@ -21,18 +21,21 @@ final class UserListViewModel: ViewModel, ViewModelType {
 
     struct Output {
         let isLoading: Driver<Bool>
+        let error: Driver<Error>
         let cellViewModels: Driver<[UserTableViewCellViewModel]>
         let userSelected: Driver<UserDetailViewModel>
     }
 
     func transform(input: Input) -> Output {
         let cellViewModels = input.trigger
-            .flatMapLatest { _ -> Driver<[User]> in
+            .flatMapLatest { [weak self] _ -> Driver<[User]> in
+                guard let self = self else { return Driver.empty() }
                 let reachability = try! Reachability()
                 let isReachable = reachability.connection != .unavailable
                 if isReachable {
                     return UserService.shared.getUsers()
                         .trackActivity(self.activityIndicator)
+                        .trackError(self.error)
                         .asDriver(onErrorJustReturn: [])
                         .do(onNext: { users in
                             RealmManager.shared.add(objects: users)
@@ -40,6 +43,7 @@ final class UserListViewModel: ViewModel, ViewModelType {
                 } else {
                     return UserRealmService.shared.getUsers()
                         .trackActivity(self.activityIndicator)
+                        .trackError(self.error)
                         .asDriver(onErrorJustReturn: [])
                 }
             }.map({ users in
@@ -49,10 +53,11 @@ final class UserListViewModel: ViewModel, ViewModelType {
             })
 
         let loading = activityIndicator.asDriver()
-
+        let error = self.error.asDriver()
         let userSelected = input.selection.map({ UserDetailViewModel(user: $0.user) })
 
         return Output(isLoading: loading,
+                      error: error,
                       cellViewModels: cellViewModels,
                       userSelected: userSelected)
     }

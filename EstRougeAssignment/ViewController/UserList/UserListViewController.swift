@@ -77,6 +77,10 @@ final class UserListViewController: UIViewController {
             userDetailViewController.viewModel = userDetailViewModel
             self?.navigationController?.pushViewController(userDetailViewController)
         }).disposed(by: rx.disposeBag)
+
+        output.error.drive(onNext: { [weak self] error in
+            self?.showAlert(title: "Error", message: error.localizedDescription)
+        }).disposed(by: rx.disposeBag)
     }
 
 }
