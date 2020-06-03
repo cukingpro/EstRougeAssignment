@@ -2,8 +2,6 @@ PODS:
   - Alamofire (5.2.0)
   - AlamofireImage (4.1.0):
     - Alamofire (~> 5.1)
-  - AlamofireNetworkActivityIndicator (3.1.0):
-    - Alamofire (~> 5.1)
   - Moya (14.0.0):
     - Moya/Core (= 14.0.0)
   - Moya-ObjectMapper/Core (2.9):
@@ -50,18 +48,7 @@ PODS:
   - RxRelay (5.1.1):
     - RxSwift (~> 5)
   - RxSwift (5.1.1)
-  - RxSwiftExt (5.2.0):
-    - RxSwiftExt/Core (= 5.2.0)
-    - RxSwiftExt/RxCocoa (= 5.2.0)
-  - RxSwiftExt/Core (5.2.0):
-    - RxSwift (~> 5.0)
-  - RxSwiftExt/RxCocoa (5.2.0):
-    - RxCocoa (~> 5.0)
-    - RxSwiftExt/Core
   - RxSwiftUtilities (2.1.0):
-    - RxCocoa (~> 5.0)
-    - RxSwift (~> 5.0)
-  - RxViewController (1.0.0):
     - RxCocoa (~> 5.0)
     - RxSwift (~> 5.0)
   - SVProgressHUD (2.2.5)
@@ -93,7 +80,6 @@ PODS:
 
 DEPENDENCIES:
   - AlamofireImage
-  - AlamofireNetworkActivityIndicator
   - Moya-ObjectMapper/RxSwift
   - Moya/RxSwift
   - Nimble
@@ -104,9 +90,7 @@ DEPENDENCIES:
   - ReachabilitySwift
   - RealmSwift
   - RxBlocking
-  - RxSwiftExt
   - RxSwiftUtilities (from `https://github.com/RxSwiftCommunity/RxSwiftUtilities.git`, branch `master`)
-  - RxViewController
   - SVProgressHUD
   - SwifterSwift
 
@@ -114,7 +98,6 @@ SPEC REPOS:
   trunk:
     - Alamofire
     - AlamofireImage
-    - AlamofireNetworkActivityIndicator
     - Moya
     - Moya-ObjectMapper
     - Nimble
@@ -129,8 +112,6 @@ SPEC REPOS:
     - RxCocoa
     - RxRelay
     - RxSwift
-    - RxSwiftExt
-    - RxViewController
     - SVProgressHUD
     - SwifterSwift
 
@@ -147,7 +128,6 @@ CHECKOUT OPTIONS:
 SPEC CHECKSUMS:
   Alamofire: c1ca147559e730bfb2182c8c7aafbdd90a867987
   AlamofireImage: c4a2ba349885fb3064feb74d2e547bd42ce9be10
-  AlamofireNetworkActivityIndicator: 6564782bd7b9e6c430ae67d9277af01907b01ca4
   Moya: 5b45dacb75adb009f97fde91c204c1e565d31916
   Moya-ObjectMapper: 967a99d9ea3aa9c93ddbe112aeca3667f53bfe93
   Nimble: 98b888285a615fd34f20e61753cf58ea1402bde4
@@ -162,12 +142,10 @@ SPEC CHECKSUMS:
   RxCocoa: 32065309a38d29b5b0db858819b5bf9ef038b601
   RxRelay: d77f7d771495f43c556cbc43eebd1bb54d01e8e9
   RxSwift: 81470a2074fa8780320ea5fe4102807cb7118178
-  RxSwiftExt: 4ca80336f43c28f11a2825cdd2fc61dd6c044697
   RxSwiftUtilities: dc208a9567b5b8da972056055de8f0446f9aa2d6
-  RxViewController: 7330a46e5c31cd680db169da4c9fc8676e975a81
   SVProgressHUD: 1428aafac632c1f86f62aa4243ec12008d7a51d6
   SwifterSwift: 334181863c416882d97b7a60c05054d9e4d799e2
 
-PODFILE CHECKSUM: c79630cbb212b3f5c687775dff4a4cf9f0db1bbb
+PODFILE CHECKSUM: 52fb1ef1c80bb6afef585a68fa8ddb98db4c4123
 
 COCOAPODS: 1.9.2
